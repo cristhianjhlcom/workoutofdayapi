@@ -20,7 +20,7 @@ Es un proyecto creado en directo a travéz de mi canal. 📽️
 
 1. Clona este repositorio en tu máquina local:
 
-```git clone https://github.com/tu-usuario/workout-of-day-api.git```
+```git clone https://github.com/cristhianjhlcom/workoutofdayapi```
 
 2. Accede al directorio del proyecto:
 
