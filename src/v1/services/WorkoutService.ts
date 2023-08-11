@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto';
 import WorkoutDatabase from '../database/WorkoutDatabase';
 import { type Workout } from '../types/workout';
 
@@ -10,8 +11,15 @@ class WorkoutService {
 		return;
 	}
 
-	public store() {
-		return;
+	public store(data: Workout) {
+        const newWorkout = {
+            ...data,
+            id: randomUUID(),
+            createdAt: new Date().toLocaleString('es-PE', {timeZone: 'UTC'}),
+            updatedAt: new Date().toLocaleString('es-PE', {timeZone: 'UTC'}),
+        };
+        const createdWorkout = WorkoutDatabase.addNewWorkout(newWorkout);
+        return createdWorkout;
 	}
 
 	public update() {
