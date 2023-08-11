@@ -1,23 +1,26 @@
-import Workout from '../database/Workout';
+import WorkoutDatabase from '../database/WorkoutDatabase';
+import { type Workout } from '../types/workout';
 
-export default class WorkoutService {
-	public list() {
-		return Workout.getAllWorkouts();
+class WorkoutService {
+	public index(): Workout[] {
+		return WorkoutDatabase.getAllWorkouts();
 	}
 
-	public getOneById() {
+	public show() {
 		return;
 	}
 
-	public create() {
+	public store() {
 		return;
 	}
 
-	public updateOneById() {
+	public update() {
 		return;
 	}
 
-	public destroyOneById() {
+	public destroy() {
 		return;
 	}
 }
+
+export default new WorkoutService();
